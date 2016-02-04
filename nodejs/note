@@ -1,0 +1,18 @@
+project steps
+1: npm install -g express-generator
+2: express -e blog
+3: DEBUG=blog node ./bin/www
+
+插件
+1: markdown
+2: connect-flash 结合重定向，确保信息提供给下一个被渲染的页面
+3: multer 文件上传 缺点功能单一
+4: exprss-session session功能
+5: connect-mongo 与express-session结合使用，实现了将会话信息存储到MongoDB中。
+6: mongodb 链接mongodb数据库
+7: cypto 生成散列值来加密密码
+8: fs-extra 操作文件
+9: node-schedule 定时
+
+encodeURI怎么用
+remove w:1 是什么意思

@@ -1,0 +1,110 @@
+<div class="wrapper">
+
+    <div class="in-wrapper" style="margin-top:28px;box-shadow:0px 4px 2px #888888;">
+        <div class="itemInfo">
+            <div class="btn-group">
+                <a href="javascript:;" class="edit btn btn-default" data-target="proName">Edit</a>
+                <a href="javascript:;" class="save btn btn-default" data-target="proName">Save</a>
+            </div>
+
+            <img src="<%= proTypeIcon %>" title="<%= proType %>" class="hImg">
+
+            <div style="margin-left:80px;font-size:12px">
+                <h2 id="proName" class="item"><%= proName %></h2>
+                <% _.map(tag,function(item,key){ %>
+                <span class="label label-success"><%= item %></span>
+                <%})%>&emsp;&emsp;
+                <span>更新于：<%= submitDate %></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="in-wrapper">
+
+        <div class="itemInfo">
+            <div class="clearfix">
+                <div class="btn-group">
+                    <a href="javascript:;" class="edit btn btn-default" data-target="proDes">Edit</a>
+                    <a href="javascript:;" class="save btn btn-default" data-target="proDes">Save</a>
+                </div>
+                <h3>项目简介</h3>
+            </div>
+            <div id="proDesc" class="content item"><%= proDesc %></div>
+        </div>
+
+        <div class="itemInfo">
+            <div class="clearfix">
+                <div class="btn-group">
+                    <a href="javascript:;" class="edit btn btn-default" data-target="person">Edit</a>
+                    <a href="javascript:;" class="save btn btn-default" data-target="person">Save</a>
+                </div>
+                <h3>项目成员</h3>
+            </div>
+            <div id="person" class="content">
+                <% _.map(proTeam,function(person){ %>
+                <p><i style="display:inline-block;width:60px;text-align:right;margin-right:20px;"><%= person.group %>：</i><span style="display:inline-block;width:300px;" class="item"><%= person.name %></span></p>
+                <%})%>
+            </div>
+        </div>
+
+        <div class="itemInfo" >
+            <h3>前端Hifi原型</h3>
+            <div class="subItemInfo">
+                <div class="clearfix">
+                    <div class="btn-group">
+                        <a href="javascript:;" class="edit btn btn-default" data-target="cssLink">Edit</a>
+                        <a href="javascript:;" class="save btn btn-default" data-target="cssLink">Save</a>
+                    </div>
+                    <h4>原型地址</h4>
+                </div>
+                <div id="cssLink" class="content link item" style="padding-left:20px"><%= cssLink %> </div>
+            </div>
+
+            <div class="subItemInfo">
+                <div class="clearfix">
+                    <div class="btn-group">
+                        <a href="javascript:;" class="edit btn btn-default" data-target="repository">Edit</a>
+                        <a href="javascript:;" class="save btn btn-default" data-target="repository">Save</a>
+                    </div>
+                    <h4>仓库分支</h4>
+                </div>
+                <div id="branch" class="content branch item" style="padding-left:20px;"><%= branch%></div>
+            </div>
+
+            <div class="subItemInfo">
+                <div class="clearfix">
+                    <div class="btn-group">
+                        <a href="javascript:;" class="edit btn btn-default" data-target="picsLink">Edit</a>
+                        <a href="javascript:;" class="save btn btn-default" data-target="picsLink">Save</a>
+                    </div>
+                    <h4>图片发布地址</h4>
+                </div>
+                <div id="picsLink" class="content link item" style="padding-left:20px"><%= picsLink %> </div>
+            </div>
+        </div>
+
+        <div class="itemInfo">
+            <div class="clearfix">
+                <div class="btn-group">
+                    <a href="javascript:;" class="edit btn btn-default" data-target="lowfiLink">Edit</a>
+                    <a href="javascript:;" class="save btn btn-default" data-target="lowfiLink">Save</a>
+                </div>
+                <h3>Lowfi交互原型</h3>
+            </div>
+            <div id="lowfiLink" class="content link item"><%= lowfiLink%> </div>
+
+        </div>
+        <div class="itemInfo">
+            <div class="clearfix">
+                <div class="btn-group">
+                    <a href="javascript:;" class="editVI btn btn-default" data-target="viLink">Edit</a>
+                    <a href="javascript:;" class="saveVI btn btn-default" data-target="viLink">Save</a>
+                </div>
+                <h3>视觉稿<input type="file" id="addFiles" multiple class="fileBox"></h3>
+            </div>
+            <div id="uploadBox">
+
+            </div>
+        </div>
+    </div>
+</div>

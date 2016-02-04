@@ -1,0 +1,5 @@
+<% _.each(items,function(item){ %>
+<li>
+    <a href="#item/<%= item.id%>" class="itemLink"><span class="proName"><%= item.proName %></span><span class="overview">时间：<%= item.submitDate %>&emsp;&emsp;经办人：<%= _.findWhere(item.proTeam, {group: 'CSS'}).name  %></span></a>
+</li>
+<% }) %>

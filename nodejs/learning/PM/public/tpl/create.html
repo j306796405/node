@@ -1,0 +1,107 @@
+<div class="wrapper">
+    <div class="in-wrapper" style="margin-top:28px;box-shadow:0px 4px 2px #888888;">
+        <img src="images/newDoc.png" style="float:left; width:56px;">
+        <div style="margin-left:80px;font-size:12px">
+            <h2>新项目文档</h2>
+        </div>
+    </div>
+    <div class="in-wrapper">
+        <table class="table table-responsive add-table">
+            <tr>
+                <th>业务线类型</th>
+                <td>
+                    <div id="tags">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" data-value="Online" value="Online"> Online
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" data-value="Offline" value="Offline"> Offline
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" data-value="Mobile" value="Mobile"> Mobile
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>项目类型/名称</th>
+                <td>
+                    <select class="form-control dib" id="proType" style="width:90px;">
+                        <option value="变更"> 变更
+                        <option value="项目"> 项目
+                        <option value="团队"> 团队
+                    </select>
+                    <input type="text" id="proName" class="form-control dib"  style="width: 710px;">
+                </td>
+            </tr>
+
+            <tr>
+                <th>项目简介</th>
+                <td>
+                    <input type="text" id="proDesc" class="form-control">
+                </td>
+            </tr>
+
+            <tr>
+                <th>项目成员</th>
+                <td >
+                    <div id="proTeam" >
+                        <label><i>CSS</i>
+                            <input type="text"  class="form-control" data-value="CSS">
+                        </label>
+                        <label><i>VI</i>
+                            <input type="text"  class="form-control" data-value="VI">
+                        </label>
+                        <label><i>UI</i>
+                            <input type="text"  class="form-control" data-value="UI">
+                        </label>
+                        <label><i>PM</i>
+                            <input type="text"  class="form-control" data-value="PM">
+                        </label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <th>前端Hifi原型</th>
+                <td>
+                    <input type="text"  class="form-control" id="cssLink" value="">
+                </td>
+            </tr>
+            <tr>
+                <th>图片发布地址</th>
+                <td>
+                    <input type="text"  class="form-control" id="picsLink" value="">
+                </td>
+            </tr>
+            <tr>
+                <th>仓库分支</th>
+                <td>
+                    <input type="text"  class="form-control" id="branch" value="">
+                </td>
+            </tr>
+            <tr>
+                <th>UI</th>
+                <td>
+                    <input type="text"  class="form-control" id="lowfiLink" value="">
+                </td>
+            </tr>
+            <tr>
+                <th>submitDate</th>
+                <td>
+                    <input type="text"  class="form-control" id="submitDate" value="" readonly>
+                </td>
+            </tr>
+            <tr>
+                <th>VI</th>
+                <td id="uploadBox">
+                </td>
+            </tr>
+        </table>
+
+        <div id="isConfirmBtns">
+            <a href="javascript:;" class="btn btn-primary" id="addItemBtn">确定</a>
+            <a href="#list" class="btn btn-default">取消</a>
+        </div>
+    </div>
+</div>

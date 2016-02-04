@@ -1,0 +1,112 @@
+<div class="wrapper">
+    <div id="viewInfoTable">
+        <h2 >项目详情<a href="#list" id="returnBtn" style="margin-left:20px;"><span  class="glyphicon glyphicon-list"></span>返回列表</a></h2>
+        <div class="itemInfo">
+            <div class="btnGroup">
+                <a href="javascript:;" class="edit" data-target="proName">编辑</a>
+                <a href="javascript:;" class="save" data-target="proName">保存</a>
+            </div>
+            <h3>项目名称</h3>
+            <div id="proName" class="content"><%= item.proName%></div>
+        </div>
+        <div class="itemInfo">
+            <div class="btnGroup">
+                <a href="javascript:;" class="edit" data-target="person">编辑</a>
+                <a href="javascript:;" class="save" data-target="person">保存</a>
+            </div>
+            <h3>经办人</h3>
+            <div id="person" class="content"><%= item.person%></div>
+        </div>
+        <div class="itemInfo">
+            <div class="btnGroup">
+                <a href="javascript:;" class="edit" data-target="submitTime">编辑</a>
+                <a href="javascript:;" class="save" data-target="submitTime">保存</a>
+            </div>
+            <h3>提交时间</h3>
+            <div id="submitTime" class="content"><%= item.submitTime%></div>
+        </div>
+        <div class="itemInfo">
+            <div class="btnGroup">
+                <a href="javascript:;" class="editLink" data-target="lowfiLink">编辑</a>
+                <a href="javascript:;" class="saveLink" data-target="lowfiLink">保存</a>
+            </div>
+            <h3>交互稿</h3>
+            <div id="lowfiLink" class="content">
+                <ul class="linkUL">
+                    <li><span class="glyphicon glyphicon-link num"></span><a class="link" target="_blank" href="<%= item.lowfiLink%>" ><%= item.lowfiLink%></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="itemInfo">
+            <div class="btnGroup">
+                <a href="javascript:;" class="editVI" data-target="viLink">编辑</a>
+                <a href="javascript:;" class="saveVI" data-target="viLink">保存</a>
+            </div>
+
+            <h3>视觉稿<input type="file" id="addFiles" multiple class="fileBox"></h3>
+            <div id="viLink" class="content">
+                <% _.map(item.viLink,function(link){%>
+                <div class="viBox">
+                    <a href="<%= link%>" target="_blank"><img src="<%= link%>" class="viImg"></a>
+                    <a href="javascript:;" class="glyphicon glyphicon-remove" data-path="<%= link.substring(6)%>"></a>
+                </div>
+                <%})%>
+            </div>
+        </div>
+        <div class="itemInfo" >
+            <div class="btnGroup">
+                <a href="javascript:;" class="editLink" data-target="cssLink">编辑</a>
+                <a href="javascript:;" class="saveLink" data-target="cssLink">保存</a>
+            </div>
+            <h3>原型<a href="javascript:;" data-target="cssLink" class="glyphicon glyphicon-plus" title="增加原型" style="display:none"></a></h3>
+            <div id="cssLink" class="content">
+                <ul class="linkUL">
+                    <% _.map(item.cssLink,function(link,key){%>
+                    <li><span class="glyphicon glyphicon-link num"></span><a class="link" href="<%= link%>" target="_blank"><%= link%></a></li>
+                    <%})%>
+                </ul>
+            </div>
+        </div>
+        <div class="itemInfo" >
+            <div class="btnGroup">
+                <a href="javascript:;" class="editLink" data-target="picsLink">编辑</a>
+                <a href="javascript:;" class="saveLink" data-target="picsLink">保存</a>
+            </div>
+            <h3>新增图片<a href="javascript:;" data-target="picsLink" class="glyphicon glyphicon-plus" title="新增图片" style="display:none"></a></h3>
+            <div id="picsLink" class="content" >
+                <ul class="linkUL">
+                    <% _.map(item.picsLink,function(link,key){%>
+                    <li><span class="glyphicon glyphicon-link num"></span><a class="link" href="<%= link%>" target="_blank"><%= link%></a></li>
+                    <%})%>
+                </ul>
+
+            </div>
+        </div>
+        <div class="itemInfo">
+            <div class="btnGroup">
+                <a href="javascript:;" class="edit" data-target="repository">编辑</a>
+                <a href="javascript:;" class="save" data-target="repository">保存</a>
+            </div>
+            <h3>仓库名</h3>
+            <div id="repository" class="content"><%= item.repository%></div>
+        </div>
+        <div class="itemInfo">
+            <div class="btnGroup">
+                <a href="javascript:;" class="edit" data-target="branchName">编辑</a>
+                <a href="javascript:;" class="save" data-target="branchName">保存</a>
+            </div>
+            <h3>分支名</h3>
+            <div id="branchName" class="content"><%= item.branchName%></div>
+        </div>
+        <div class="itemInfo">
+            <div class="btnGroup">
+                <a href="javascript:;" class="edit" data-target="workingTime">编辑</a>
+                <a href="javascript:;" class="save" data-target="workingTime">保存</a>
+            </div>
+            <h3>开发工时</h3>
+
+            <div id="workingTime" class="content"><%= item.workingTime%></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<div class="wrapper">
+    <div id="editView">
+        <h2>填写项目信息</h2>
+        <table class="table table-responsive">
+
+            <tr>
+                <th>项目名称</th>
+                <td><input type="text" id="editProName" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <th>经办人</th>
+                <td>
+                    <input type="text" id="editPerson" class="form-control" list="csser">
+                    <datalist id="csser">
+                        <option>王卓</option>
+                        <option>汪兆飞</option>
+                        <option>段飞祥</option>
+                        <option>蒋林捷</option>
+                        <option>江毅平</option>
+                        <option>刘翔</option>
+                        <option>李志嘉</option>
+                        <option>郑俊</option>
+                    </datalist>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>提交时间</th>
+                <td><input type="type" id="editSubmitTime" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <th>UI</th>
+                <td><input type="text" id="editLowfiLink" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <th>VI</th>
+                <td>
+                    <div style="margin:0 0 10px -20px;"><input type="file" id="files" multiple style="display:inline-block"><span style="color:blue">（选择或者拖拽图片至下面区域）</span></div>
+                    <div id="editVI"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <th>CSS<a href="javascript:;" id="addCss" class="glyphicon glyphicon-plus" title="增加原型"></a></th>
+                <td id="editCssLink">
+                    <input type="text" class="form-control">
+                </td>
+            </tr>
+
+            <tr>
+                <th>新增图片<a href="javascript:;" id="addVi" class="glyphicon glyphicon-plus" title="增加图片"></a></th>
+                <td id="editPicsLink">
+                </td>
+            </tr>
+
+            <tr>
+                <th>仓库名</th>
+                <td><input type="text" id="editRepository" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <th>分支名</th>
+                <td><input type="text" id="editBranchName" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <th>开发工时</th>
+                <td><input id="editWorkingTime" type="number" class="form-control"></td>
+            </tr>
+
+        </table>
+
+        <div id="isConfirmBtns">
+            <a href="javascript:;" class="btn btn-primary" id="addItemBtn">确定</a>&emsp;&emsp;
+            <a href="#list" class="btn btn-default">取消</a>
+        </div>
+    </div>
+</div>

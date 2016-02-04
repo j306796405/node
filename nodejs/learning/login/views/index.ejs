@@ -1,0 +1,10 @@
+<% include header.ejs %>
+    <% if(!user){ %>
+        <h4><%= msg %></h4>
+        <h1>Welcome to <%= title %></h1>
+        <p><a href="/login">登录</a></p>
+    <% }else{ %>
+        <h1>Welcome <%= user.username %>, 欢迎登录！！</h1>
+        <p><a href="/home">主页</a></p>
+    <% } %>
+<% include footer.ejs %>

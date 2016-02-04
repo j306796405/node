@@ -1,0 +1,10 @@
+<a href="<%= path %>" target="_blank" class="imgA">
+    <div class="img-wrap">
+        <img src="<%= path %>" class="viImg" title="<%= name %>">
+    </div>
+    <div class="picName"><%= name %></div>
+    <div class="uploadify-progress">
+        <div class="uploadify-progress-bar" style="width: 100%;"><!--Progress Bar--></div>
+    </div>
+</a>
+<a href="javascript:;" class="glyphicon glyphicon-remove <% if(!isEdit){ %> hidden <% } %>" data-path="<%= path %>"></a>
